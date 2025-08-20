@@ -15,4 +15,5 @@ This repo contains a collection of my solutions to the problems given as trainin
   - UCF Programming Team webiste (LPC contains previous years problem sets and data):
   - https://lpc.ucfprogrammingteam.org/
 
-Codeforce profile: https://codeforces.com/profile/soliveira27
+### Codeforces
+  - profile: https://codeforces.com/profile/soliveira27
