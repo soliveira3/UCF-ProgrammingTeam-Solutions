@@ -1,4 +1,4 @@
-# UCF ProgrammingTeam Solutions
+# UCF Programming Team Solutions
 This repo contains a collection of my solutions to the problems given as training for the UCF Competitive Programming Team
 
 See Contests for the solutions to problems solved during 5-hour saturday mock contests
