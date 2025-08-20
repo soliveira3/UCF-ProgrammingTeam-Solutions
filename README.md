@@ -14,3 +14,5 @@ This repo contains a collection of my solutions to the problems given as trainin
   - These problems are used to select who will be on the UCF programming team
   - UCF Programming Team webiste (LPC contains previous years problem sets and data):
   - https://lpc.ucfprogrammingteam.org/
+
+Codeforce profile: https://codeforces.com/profile/soliveira27
