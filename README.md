@@ -12,4 +12,5 @@ See LearnSet for a collection of problems catagorized by technique.
 
 See UCF Locals for my solutions for previous UCF programming team tryout contests
   These problems are used to select who will be on the UCF programming team
-  UCF Programming Team webiste (LPC contains previous years problem sets and data) : https://lpc.ucfprogrammingteam.org/
+  UCF Programming Team webiste (LPC contains previous years problem sets and data):
+  https://lpc.ucfprogrammingteam.org/
