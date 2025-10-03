@@ -7,8 +7,8 @@ typedef long long ll;
 typedef pair<ll, ll> pll;
 typedef vector<ll> vll;
 typedef vector<int> vi;
-
-
+ 
+ 
 struct AhoCorasick {
 	enum {alpha = 26, first = 'a'}; // CHANGE THIS!
 	struct Node {
@@ -35,7 +35,7 @@ struct AhoCorasick {
 		rep(i,0,sz(pat)) insert(pat[i], i);
 		N[0].back = sz(N);
 		N.emplace_back(0);
-
+ 
 		queue<int> q;
 		for (q.push(0); !q.empty(); q.pop()) {
 			int n = q.front(), prev = N[n].back;
@@ -75,35 +75,32 @@ struct AhoCorasick {
 		return res;
 	}
 };
-
-
+ 
+ 
 int main()
 {
     cin.tie(0)->sync_with_stdio(0);
     cin.exceptions(cin.failbit);
-
+ 
     string s; cin >> s;
-    int n = sz(s);
     ll k; cin >> k;
     vector<string> pat(k);
-
-    rep(i, 0, k) cin >> pat[i];
-
+    rep(i, 0, k) { cin >> pat[i]; }
+ 
     AhoCorasick ac(pat);
     vector<int> mn(k, 0);
     vi res = ac.find(s);
-
+ 
     rep(i, 0, sz(res))
     {
         int x = res[i];
         while (x != -1)
         {
             if (mn[x]) break;
-            mn[x] = i+1;
-            cout << sz(pat[x]) << '\n';
+            mn[x] = i+1 - sz(pat[x])+1;
             x = ac.backp[x];
         }
     }
-
+ 
     rep (i, 0, k) cout << (mn[i] ? mn[i] : -1) << '\n';
 }

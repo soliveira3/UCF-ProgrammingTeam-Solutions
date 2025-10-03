@@ -11,7 +11,7 @@ typedef vector<int> vi;
  
  
 struct AhoCorasick {
-	enum {alpha = 26, first = 'A'}; // CHANGE THIS!
+	enum {alpha = 26, first = 'a'}; // CHANGE THIS!
 	struct Node {
 		// (nmatches is optional)
 		int back, next[alpha], start = -1, end = -1, nmatches = 0;
@@ -36,7 +36,7 @@ struct AhoCorasick {
 		rep(i,0,sz(pat)) insert(pat[i], i);
 		N[0].back = sz(N);
 		N.emplace_back(0);
-
+ 
 		queue<int> q;
 		for (q.push(0); !q.empty(); q.pop()) {
 			int n = q.front(), prev = N[n].back;
@@ -105,4 +105,3 @@ int main()
         cout << ans[idx] << '\n';
     }
 }
-
