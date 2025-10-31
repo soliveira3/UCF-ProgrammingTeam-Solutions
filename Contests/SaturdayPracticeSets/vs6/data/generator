@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+export PPATH
+PPATH=$(realpath ..)
+USE_SCORING=0
+# shellcheck source-path=SCRIPTDIR
+. ../../testdata_tools/gen.sh
+
+use_solution atli.cpp
+
+compile generator.py
+
+sample 1
+sample 2
+sample 3
+
+tc 1
+tc 2
+tc 3
+
+# checks a cycle with mu > 0
+tc mufail generator fix 128 123123123
+# checks n = 1 case
+tc minn1 generator fix 1 1
+tc minn2 generator fix 1 10**9
+# checks case with large loops
+tc bigploop generator fix 299993 999876669
+tc big2loop generator fix 2**18 10**9
+# checks case with many unique prime factors (in case of crt)
+tc manyfac generator fix 30030 10**9
+tc small_n_big_e_1 generator fix 7 1000000000
+tc small_n_big_e_2 generator fix 5 999999999
+
+for i in {01..40}; do
+    tc "rand-small-$i" generator rand 2 10 1 100
+    tc "rand-medium-$i" generator rand 11 1000 101 10**5
+    tc "rand-big-$i" generator rand 1001 3*10**5 10**5+1 10**9
+done;

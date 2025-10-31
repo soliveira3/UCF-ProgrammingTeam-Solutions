@@ -20,6 +20,7 @@
         "text_encoding": "cpp",
         "regex": "cpp",
         "valarray": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "iosfwd": "cpp"
     }
 }
